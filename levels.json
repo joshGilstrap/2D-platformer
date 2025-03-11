@@ -1,0 +1,67 @@
+{
+    "levels": [
+        {
+            "name": "Level 1",
+            "index": 0,
+            "level_width": 1600,
+            "level_height": 1200,
+            "player": [
+                {"type": "player", "x": 100, "y": 1100, "width": 50, "height": 50}
+            ],
+            "walls": [
+                {"type": "wall", "x": 0, "y": 1150, "width": 1600, "height": 50},
+                {"type": "wall", "x": 0, "y": 0, "width": 50, "height": 1200},
+                {"type": "wall", "x": 0, "y": 0, "width": 1600, "height": 50},
+                {"type": "wall", "x": 1550, "y": 0, "width": 50, "height": 1200},
+                {"type": "wall", "x": 300, "y": 825, "width": 100, "height": 50},
+                {"type": "wall", "x": 750, "y": 825, "width": 100, "height": 375},
+                {"type": "wall", "x": 900, "y": 500, "width": 300, "height": 50},
+                {"type": "wall", "x": 900, "y": 400, "width": 50, "height": 150},
+                {"type": "wall", "x": 1150, "y": 400, "width": 50, "height": 150}
+            ],
+            "enemies": [
+                {"type": "enemy", "x": 300, "y": 1100, "width": 50, "height": 50, "speed": 2, "dir": 1, "color": "RED"},
+                {"type": "enemy", "x": 600, "y": 1100, "width": 50, "height": 50, "speed": 2, "dir": 1, "color": "RED"},
+                {"type": "enemy", "x": 1000, "y": 1100, "width": 50, "height": 50, "speed": 2, "dir": -1, "color": "RED"},
+                {"type": "enemy", "x": 1000, "y": 350, "width": 50, "height": 50, "speed": 2, "dir": 1, "color": "RED"},
+                {"type": "enemy", "x": 1100, "y": 350, "width": 50, "height": 50, "speed": 2, "dir": -1, "color": "RED"}
+            ],
+            "tokens": [
+                {"type": "token", "x": 62, "y": 62, "width": 25, "height": 25, "color": "PURPLE", "value": 10},
+                {"type": "token", "x": 312, "y": 788, "width": 25, "height": 25, "color": "PURPLE", "value": 10},
+                {"type": "token", "x": 362, "y": 788, "width": 25, "height": 25, "color": "PURPLE", "value": 10},
+                {"type": "token", "x": 962, "y": 462, "width": 25, "height": 25, "color": "PURPLE", "value": 10},
+                {"type": "token", "x": 1012, "y": 462, "width": 25, "height": 25, "color": "PURPLE", "value": 10},
+                {"type": "token", "x": 1062, "y": 462, "width": 25, "height": 25, "color": "PURPLE", "value": 10},
+                {"type": "token", "x": 1112, "y": 462, "width": 25, "height": 25, "color": "PURPLE", "value": 10}
+            ],
+            "hazards": [
+                {"type": "hazard", "x": 750, "y": 775, "width": 50, "height": 50, "color": "GREY", "direction": "up"},
+                {"type": "hazard", "x": 200, "y": 1100, "width": 50, "height": 50, "color": "GREY", "direction": "up"},
+                {"type": "hazard", "x": 400, "y": 1100, "width": 50, "height": 50, "color": "GREY", "direction": "up"},
+                {"type": "hazard", "x": 150, "y": 50, "width": 50, "height": 50, "color": "GREY", "direction": "down"},
+                {"type": "hazard", "x": 50, "y": 350, "width": 50, "height": 50, "color": "GREY", "direction": "left"}
+            ]
+        },
+        {
+            "name": "Level 2",
+            "index": 1,
+            "level_width": 5200,
+            "level_height": 900,
+            "player": [
+                {"type": "player", "x": 200, "y": 800, "width": 50, "height": 50}
+            ],
+            "walls": [
+                {"type": "wall", "x": 0, "y": 850, "width": 800, "height": 50},
+                {"type": "wall", "x": 0, "y": 0, "width": 220, "height": 50},
+                {"type": "wall", "x": 0, "y": 0, "width": 50, "height": 900},
+                {"type": "wall", "x": 1000, "y": 600, "width": 50, "height": 100},
+                {"type": "wall", "x": 1200, "y": 600, "width": 50, "height": 100},
+                {"type": "wall", "x": 1400, "y": 850, "width": 80, "height": 50}
+            ],
+            "enemies": [
+                {"type": "enemy", "x": 1400, "y": 800, "width": 50, "height": 50, "speed": 0, "dir": 0, "color": "RED"}
+            ]
+        }
+    ]
+}
