@@ -105,12 +105,10 @@ class Player(pygame.sprite.Sprite):
             collide_top = self.rect.bottom > enemy.rect.top and abs(self.rect.top - enemy.rect.top) < self.height
             collide_bottom = self.rect.top < enemy.rect.bottom and abs(self.rect.bottom - enemy.rect.bottom) < self.height
             if collide_right and self.y_vel == 0:
-                print('collide right')
                 self.x_vel = -self.jump_height // 2
                 if self.invincibility_timer >= self.invincibility_timeframe:
                     self.handle_damage()
             if collide_left and self.y_vel == 0:
-                print('collide left')
                 self.x_vel = self.jump_height // 2
                 if self.invincibility_timer >= self.invincibility_timeframe:
                     self.handle_damage()
@@ -237,5 +235,4 @@ class Player(pygame.sprite.Sprite):
         if self.rect.x < 0:
             self.rect.x = 0
         elif self.rect.x > level_width - self.width:
-            print(level_width)
             self.rect.x = level_width - self.width

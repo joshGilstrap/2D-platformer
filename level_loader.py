@@ -34,7 +34,6 @@ def load_level(level):
                 hazards.add(Hazard(hazard['x'], hazard['y'], hazard['width'], hazard['height'], hazard['color'], hazard['direction']))
     total_level_width = level['level_width']
     total_level_height = level['level_height']
-    print(total_level_width, total_level_height)
     
     return walls, enemies, tokens, hazards, player, total_level_width, total_level_height
 
