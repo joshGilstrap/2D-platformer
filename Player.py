@@ -44,26 +44,24 @@ class Player(pygame.sprite.Sprite):
         self.is_wall_sliding = False
         wall_collisions = pygame.sprite.spritecollide(self, walls, False)
         for wall in wall_collisions:
-            collide_left = self.rect.right > wall.rect.left
+            collide_left = self.rect.right > wall.rect.left and self.rect.left > wall.rect.left
             collide_right = self.rect.left < wall.rect.right and self.rect.right > wall.rect.right
-            collide_top = self.rect.bottom > wall.rect.top and self.rect.top < wall.rect.top -25 and (collide_left or collide_right)
-            collide_bottom = self.rect.top < wall.rect.bottom and self.rect.bottom > wall.rect.bottom and (collide_left or collide_right)
-            if self.x_vel > 0 and collide_left and not collide_top and not collide_bottom:
-                self.rect.right = wall.rect.left
-                self.x_vel *= -1
-                self.x_vel = 0
-                self.is_wall_sliding = True
-                # self.is_jumping = True
-                self.wall_direction = 'right'
-                self.facing_direction = "right"
+            collide_top = self.rect.bottom > wall.rect.top and self.rect.top < wall.rect.top -25
+            collide_bottom = self.rect.top < wall.rect.bottom and self.rect.bottom > wall.rect.bottom
             if self.x_vel < 0 and collide_right and not collide_top and not collide_bottom:
                 self.rect.left = wall.rect.right
                 self.x_vel *= -1
                 self.x_vel = 0
                 self.is_wall_sliding = True
-                # self.is_jumping = True
                 self.wall_direction = 'left'
                 self.facing_direction = "left"
+            if self.x_vel > 0 and collide_left and not collide_top and not collide_bottom:
+                self.rect.right = wall.rect.left
+                self.x_vel *= -1
+                self.x_vel = 0
+                self.is_wall_sliding = True
+                self.wall_direction = 'right'
+                self.facing_direction = "right"
             if self.y_vel > 0 and collide_top and not collide_bottom:
                 self.y_vel *= -1
                 self.y_vel = 0
